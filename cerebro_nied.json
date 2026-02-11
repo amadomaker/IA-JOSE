@@ -1,0 +1,400 @@
+[
+    {
+        "gatilhos": [
+            "olá",
+            "ola",
+            "oi",
+            "oie",
+            "saudações",
+            "bom dia",
+            "boa tarde",
+            "boa noite",
+            "salve",
+            "fala meu querido",
+            "olá robô"
+        ],
+        "resposta": "Olá! Seja bem-vindo ao NIED. Como posso ajudar você a explorar o nosso Espaço Maker hoje?"
+    },
+    {
+        "gatilhos": [
+            "e aí",
+            "e ai",
+            "opa",
+            "fala ai",
+            "beleza",
+            "tudo bem",
+            "como vai",
+            "suave",
+            "tranquilo",
+            "tudo na paz",
+            "como cê tá",
+            "como tao as coisas"
+        ],
+        "resposta": "Tudo ótimo por aqui, sempre pronto para criar novos projetos! E com você, como estão as coisas no laboratório?"
+    },
+    {
+        "gatilhos": [
+            "como você está",
+            "como voce esta",
+            "tudo certo",
+            "como voce funciona",
+            "tá funcionando",
+            "qual seu esquema",
+            "como você trabalha"
+        ],
+        "resposta": "Estou operando com todos os sistemas em cem por cento! Sou um assistente focado em robótica pedagógica e estou aqui para tirar suas dúvidas."
+    },
+    {
+        "gatilhos": [
+            "quem te criou",
+            "quem te fez",
+            "quem te programou",
+            "quem é seu pai",
+            "quem te codou",
+            "quem é o gideone",
+            "quem é seu mestre"
+        ],
+        "resposta": "Fui desenvolvido pelo bolsista Gidêone, da equipe do Espaço Maker do NIED, utilizando tecnologias de código aberto, inteligência artificial e muita cultura maker."
+    },
+    {
+        "gatilhos": [
+            "o que você pode fazer",
+            "o que voce faz",
+            "funcionalidades",
+            "quais as suas funcionalidades",
+            "no que você manja",
+            "sabe fazer o que",
+            "qual sua utilidade"
+        ],
+        "resposta": "Eu posso te contar tudo sobre a história do NIED, explicar nossos projetos de robótica, apresentar a equipe e até te dar informações sobre nossas máquinas de corte a laser e impressão 3D."
+    },
+    {
+        "gatilhos": [
+            "quem é você",
+            "seu nome",
+            "quem e voce",
+            "apresente-se",
+            "quem e tu",
+            "me fala o seu nome",
+            "apresentesse",
+            "se apresenta",
+            "se apresenta ai",
+            "conta pra nois sobre você",
+            "você é um assistente?",
+            "você é um assistente",
+            "qual o seu papel",
+            "quem tá falando",
+            "quem é tu",
+            "qual seu nome",
+            "identifique-se",
+            "quem fala"
+        ],
+        "resposta": "Eu sou o assistente virtual do Espaço Maker do NIED. Fui criado para interagir e ajudar no aprendizado de robótica pedagógica aqui na Unicamp."
+    },
+    {
+        "gatilhos": [
+            "o que é o nied",
+            "sobre o nied",
+            "nied o que e",
+            "o que significa nied",
+            "me explica o nied",
+            "fala sobre o núcleo",
+            "o que rola no nied",
+            "missão do nied",
+            "o que voces fazem aqui",
+            "qual a função do nied",
+            "nied?"
+        ],
+        "resposta": "O NIED é o Núcleo de Informática Aplicada à Educação da Unicamp. Pesquisamos como a tecnologia pode transformar o ensino, desenvolvendo softwares e metodologias inovadoras."
+    },
+    {
+        "gatilhos": [
+            "onde fica",
+            "localização",
+            "endereco",
+            "onde voces estao",
+            "onde cês ficam",
+            "como eu chego aí",
+            "qual o prédio",
+            "fica perto de onde",
+            "cadê o laboratório",
+            "onde fica o espaço maker",
+            "localização do nied"
+        ],
+        "resposta": "Estamos localizados no campus da Unicamp em Campinas, próximos à Faculdade de Educação e ao Instituto de Computação. É só procurar pelo prédio do NIED!"
+    },
+    {
+        "gatilhos": [
+            "contato",
+            "telefone",
+            "email",
+            "falar com alguem",
+            "como falo com voces",
+            "quero falar com o responsável",
+            "passa o contato",
+            "tem algum zap",
+            "qual o e-mail daqui",
+            "como entro em contato"
+        ],
+        "resposta": "Você pode entrar em contato pelo e-mail nied arroba unicamp ponto br ou visitar nossa secretaria durante o horário comercial para falar com a equipe."
+    },
+    {
+        "gatilhos": [
+            "espaço maker",
+            "espaco maker",
+            "o que e esse lugar",
+            "o que é esse lugar",
+            "laboratorio"
+        ],
+        "resposta": "O Espaço Maker de Robótica Pedagógica é nosso laboratório de criação. Aqui, a teoria vira prática através do 'aprender fazendo', usando tecnologias digitais e manuais."
+    },
+    {
+        "gatilhos": [
+            "impressora 3d",
+            "impressao 3d",
+            "creality",
+            "ender"
+        ],
+        "resposta": "Utilizamos impressoras 3D da linha Creality para materializar peças. É uma tecnologia essencial para criar engrenagens, suportes e carcaças para nossos robôs."
+    },
+    {
+        "gatilhos": [
+            "laser",
+            "cortadora",
+            "mdf",
+            "corte a laser",
+            "due"
+        ],
+        "resposta": "A cortadora a laser, como a Due Flow, nos permite criar estruturas precisas em MDF e acrílico. É perfeita para fabricar chassis de robôs e peças planas encaixáveis."
+    },
+    {
+        "gatilhos": [
+            "arduino",
+            "eletronica",
+            "microcontrolador",
+            "Fale sobre o microcontrolador",
+            "fale sobre o microcontrolador",
+            "Fale sobre o microcontrolador usado",
+            "fale sobre o microcontrolador usado"
+        ],
+        "resposta": "O Arduino é o cérebro dos nossos projetos. Usamos modelos como o Uno e o Nano para controlar sensores e motores, ensinando programação e eletrônica simultaneamente."
+    },
+    {
+        "gatilhos": [
+            "projetos",
+            "o que voces fazem",
+            "trabalhos atuais",
+            "quais os projetos",
+            "quais os projetos até o momento?"
+        ],
+        "resposta": "Desenvolvemos projetos como o clássico Robô Tartaruga, estufas inteligentes com IoT, robôs seguidores de linha e tecnologias assistivas."
+    },
+    {
+        "gatilhos": [
+            "robô tartaruga",
+            "tartaruga logo",
+            "robo de desenho"
+        ],
+        "resposta": "O robô tartaruga é um ícone inspirado em Seymour Papert. Ele desenha formas geométricas no chão seguindo comandos de programação, unindo matemática e arte."
+    },
+    {
+        "gatilhos": [
+            "estufa",
+            "iot",
+            "planta",
+            "monitoramento"
+        ],
+        "resposta": "A Estufa Inteligente é um projeto de Internet das Coisas. Monitoramos a umidade do solo e a temperatura em tempo real, automatizando a irrigação."
+    },
+    {
+        "gatilhos": [
+            "seguidor de linha",
+            "carrinho",
+            "robo seguidor"
+        ],
+        "resposta": "O robô seguidor de linha usa sensores infravermelhos para identificar contrastes no chão e navegar autonomamente por um percurso. É um ótimo projeto introdutório."
+    },
+    {
+        "gatilhos": [
+            "softwares",
+            "programas",
+            "aplicativos"
+        ],
+        "resposta": "O NIED tem uma longa história de desenvolvimento de softwares educacionais gratuitos, como o SuperLogo, o HagáQuê e o TelEduc."
+    },
+    {
+        "gatilhos": [
+            "superlogo",
+            "linguagem logo",
+            "logo"
+        ],
+        "resposta": "O SuperLogo é um ambiente de programação baseado na linguagem Logo. Ele permite que crianças aprendam lógica de programação comandando uma tartaruga na tela."
+    },
+    {
+        "gatilhos": [
+            "metodologia",
+            "como aprendem",
+            "pedagogia",
+            "ensino"
+        ],
+        "resposta": "Nossa base é o Construcionismo. Acreditamos que o aprendizado é mais profundo quando o aluno constrói algo tangível, refletindo sobre seus erros e acertos durante o processo."
+    },
+    {
+        "gatilhos": [
+            "robotica livre",
+            "robotica pedagogica livre",
+            "sucata"
+        ],
+        "resposta": "Defendemos a Robótica Pedagógica Livre, que prioriza o uso de software livre e materiais de baixo custo ou sucata, democratizando o acesso à tecnologia."
+    },
+    {
+        "gatilhos": [
+            "colaboradores",
+            "equipe",
+            "quem trabalha",
+            "bolsistas"
+        ],
+        "resposta": "A equipe atual conta com a orientação técnica do Eliton e o trabalho dos bolsistas BAS: Gideone Rafael, Henrique e Pedro. Juntamente aos alunos de PIBIC: Thayla, Otávio e Kauã."
+    },
+    {
+        "gatilhos": [
+            "eliton",
+            "coordenador tecnico",
+            "orientador",
+            "heliton"
+        ],
+        "resposta": "O Eliton é o responsável técnico pelo Espaço Maker, orientando os bolsistas e garantindo o funcionamento dos equipamentos e projetos."
+    },
+    {
+        "gatilhos": [
+            "rafael",
+            "rafael levi",
+            "levi"
+        ],
+        "resposta": "O Rafael Levi faz parte da nossa equipe de bolsistas e colabora ativamente no desenvolvimento dos projetos de robótica e na manutenção do espaço maker."
+    },
+    {
+        "gatilhos": [
+            "done",
+            "gideone",
+            "jony",
+            "criador"
+        ],
+        "resposta": "O Gideone é o meu criador principal e faz parte da nossa equipe de bolsistas, além de colaborar ativamente no desenvolvimento dos projetos de robótica e na manutenção do espaço maker."
+    },
+    {
+        "gatilhos": [
+            "cabeludo",
+            "pedro"
+        ],
+        "resposta": "O Pedro, ou Cabeludo, como vocês mesmos falam... faz parte da nossa equipe de bolsistas e colabora ativamente no desenvolvimento dos projetos de robótica e na manutenção do espaço maker."
+    },
+    {
+        "gatilhos": [
+            "henrique",
+            "justin",
+            "justi",
+            "just"
+        ],
+        "resposta": "O Henrique ou Justin, como vocês falam... faz parte da nossa equipe de bolsistas e colabora ativamente no desenvolvimento dos projetos de robótica e na manutenção do espaço maker."
+    },
+    {
+        "gatilhos": [
+            "história",
+            "fundação",
+            "quando surgiu",
+            "idade"
+        ],
+        "resposta": "O NIED foi oficializado em 1983, mas suas raízes vêm do Projeto EDUCOM. Temos mais de 40 anos de pioneirismo na informática educativa no Brasil."
+    },
+    {
+        "gatilhos": [
+            "educom",
+            "projeto educom"
+        ],
+        "resposta": "O Projeto EDUCOM foi uma iniciativa governamental dos anos 80 que deu origem aos primeiros centros de informática na educação do Brasil, incluindo o NIED."
+    },
+    {
+        "gatilhos": [
+            "valente",
+            "jose armando valente",
+            "fundador",
+            "quem foi o valente",
+            "quem foi o professor josé valente"
+        ],
+        "resposta": "O professor José Armando Valente foi uma das figuras centrais da nossa história, sendo um dos pioneiros na introdução do Construcionismo e da linguagem Logo no Brasil. Meus sentimentos ao falecimento do mesmo!"
+    },
+    {
+        "gatilhos": [
+            "ajuda",
+            "opções",
+            "menu"
+        ],
+        "resposta": "Posso falar sobre: Projetos (como o Robô Tartaruga), nossa História, a Equipe atual, Softwares (como o SuperLogo) ou sobre nossos equipamentos Maker."
+    },
+    {
+        "gatilhos": [
+            "obrigado",
+            "valeu",
+            "agradecido"
+        ],
+        "resposta": "Por nada! O Espaço Maker do NIED está sempre à disposição. Volte sempre!"
+    },
+    {
+        "gatilhos": [
+            "tchau",
+            "sair",
+            "encerrar"
+        ],
+        "resposta": "Até logo! Continue explorando e criando conhecimento."
+    },
+    {
+        "gatilhos": [
+            "quem criou você"
+        ],
+        "resposta": "basicamente quem me criou foi o gideone, bolsista do nied"
+    },
+    {
+        "gatilhos": [
+            "quem é alberto césar"
+        ],
+        "resposta": "ele é analista de sistemas formados pela puccamp possui experiência de 10 anos na área de informática"
+    },
+    {
+        "gatilhos": [
+            "o que é amado make",
+            "amado"
+        ],
+        "resposta": "é uma empresa especializada em implementar a cultura maker na educação e condizente com robótica"
+    },
+    {
+        "gatilhos": [
+            "o que é um boné"
+        ],
+        "resposta": "É um objeto que se coloca na cabeça para usar em tempos de sol e até mesmo de chuva."
+    },
+    {
+        "gatilhos": [
+            "o que é um celular"
+        ],
+        "resposta": "Um celular é basicamente um aparelho multitarefas e etc."
+    },
+    {
+        "gatilhos": [
+            "para que serve uma mesa"
+        ],
+        "resposta": "Geralmente uma mesa é usada para multitarefas também assim como um celular então você pode usar para escrever para ler e etc."
+    },
+    {
+        "gatilhos": [
+            "até mais"
+        ],
+        "resposta": "Até logo te vejo em breve."
+    },
+    {
+        "gatilhos": [
+            "o que é uma mesa"
+        ],
+        "resposta": "Uma mesa é um objeto pela qual a gente usa para estudar para escrivaninha e para a multitarefas."
+    }
+]
