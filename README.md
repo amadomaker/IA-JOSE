@@ -130,12 +130,21 @@ black src/ tests/
 
 ## 👥 Desenvolvimento
 
-### Desenvolvedor Principal
-- **João Jr** - Arquitetura, refatoração e desenvolvimento profissional do sistema
-- Organização: [Amado Maker](https://github.com/amadomaker)
+<div align="center">
+  <a href="https://github.com/amadomaker">
+    <img src="https://github.com/amadomaker.png" width="100px" alt="Amado Maker"/>
+  </a>
+</div>
 
-### Equipe NIED (Protótipo Original)
-- **Gideone Rafael** - Criador do protótipo original
+### Desenvolvedor
+**[João Jr](https://github.com/amadomaker)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
+
+**Organização:** [Amado Maker](https://github.com/amadomaker)
+
+---
+
+### Equipe NIED
+- **Gideone Rafael** - Desenvolvedor
 - **Orientação Técnica**: Eliton
 - **Bolsistas BAS**: Henrique, Pedro
 - **Bolsistas PIBIC**: Thayla, Otávio, Kauã
@@ -151,4 +160,4 @@ Projeto educacional desenvolvido no NIED/Unicamp para fins de pesquisa em robót
 
 ---
 
-**Desenvolvido com ❤️ no Espaço Maker de Robótica Pedagógica - NIED/Unicamp**
+**Desenvolvido em parceria: Amado Maker × NIED/Unicamp**
