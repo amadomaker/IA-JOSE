@@ -5,6 +5,8 @@ from src.kb.loader import load_kb
 from src.kb.matcher import find_best_match, find_match
 from src.core.config import KnowledgeBaseConfig
 from pathlib import Path
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import logging
 
 # Configuração de logs
@@ -16,6 +18,21 @@ app = FastAPI(
     description="API do Robô Humanoide J.O.S.E (NIED/Unicamp)",
     version="0.1.0"
 )
+
+# Configurar CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Montar frontend estático
+# O diretório 'src/frontend' deve existir
+frontend_path = Path(__file__).parent.parent / "frontend"
+frontend_path.mkdir(parents=True, exist_ok=True)
+app.mount("/app", StaticFiles(directory=frontend_path, html=True), name="frontend")
 
 # Modelo de entrada para /ask
 class QuestionRequest(BaseModel):
