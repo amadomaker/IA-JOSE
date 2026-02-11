@@ -53,7 +53,7 @@ J.O.S.E segue uma arquitetura modular em camadas, separando responsabilidades en
          ▼
 ┌─────────────────────────────────────────────────┐
 │                  DATA LAYER                     │
-│  data/kb/nied_kb.json                           │
+│  data/cerebro_nied.json                         │
 │  logs/telemetry.log                             │
 └─────────────────────────────────────────────────┘
 ```
@@ -90,7 +90,7 @@ J.O.S.E segue uma arquitetura modular em camadas, separando responsabilidades en
 import os
 
 WAKE_WORD = os.getenv("WAKE_WORD", "josé")
-KB_PATH = os.getenv("KB_PATH", "data/kb/nied_kb.json")
+KB_PATH = os.getenv("KB_PATH", "data/cerebro_nied.json")
 SERIAL_PORT = os.getenv("SERIAL_PORT", "COM3")
 SERIAL_BAUD = int(os.getenv("SERIAL_BAUD", "9600"))
 TTS_VOICE = os.getenv("TTS_VOICE", "pt-BR-AntonioNeural")

@@ -75,6 +75,41 @@ pip install -r requirements.txt
 
 ---
 
+## 🚀 Guia Rápido de Testes (Para Usuários Não-Técnicos)
+
+Se você precisa apenas validar se o robô está funcionando, siga estes passos simplificados.
+
+### 1. Iniciar o Sistema
+1. Abra o terminal (Prompt de Comando ou PowerShell).
+2. Navegue até a pasta do projeto e inicie o servidor com o comando único:
+   ```powershell
+   .\venv\Scripts\activate; uvicorn src.api.main:app --reload
+   ```
+3. Aguarde aparecer a mensagem: `Uvicorn running on http://0.0.0.0:8000`
+
+### 2. Abrir a Interface
+1. Abra o navegador (Google Chrome ou Microsoft Edge).
+2. Clique neste link: [http://localhost:8000/app/index.html](http://localhost:8000/app/index.html)
+
+### 3. Testar Conversa
+1. **Verifique o som:** Garanta que suas caixas de som estão ligadas.
+2. **Ative a voz:** No canto superior direito da tela, verifique se o botão diz **"Voz: ON"** (verde).
+3. **Fale:**
+   * Clique e **segure** o botão do microfone (🎙️).
+   * Faça **qualquer pergunta** que você quiser (ex: cumprimente o robô, pergunte sobre o projeto, etc).
+   * Solte o botão.
+4. **Resultado Esperado:**
+   * O robô deve escrever o que você falou.
+   * O robô deve responder em texto de forma coerente.
+   * O robô deve **falar** essa resposta em voz alta.
+
+### 4. Dicas de Uso
+* **Explore:** Tente perguntas variadas para ver como o robô reage.
+* **Repetição:** Se não ouvir bem, use o botão "Repetir" abaixo da resposta.
+* **Voz:** Se a voz estiver desligada, use o botão "Toggle" no canto superior para ativar.
+
+---
+
 ## 🎬 Modos de Execução
 
 ### Modo 2: API (FastAPI) - DISPONÍVEL
@@ -313,10 +348,10 @@ uvicorn src.api.main:app --reload
 
 ```powershell
 # Editar KB
-notepad data\kb\nied_kb.json
+notepad data\cerebro_nied.json
 
 # Validar JSON
-python -m json.tool data\kb\nied_kb.json
+python -m json.tool data\cerebro_nied.json
 
 # Reiniciar sistema para recarregar KB
 ```
@@ -379,7 +414,7 @@ sudo systemctl status jose.service
 - [ ] Ambiente virtual criado
 - [ ] Dependências instaladas
 - [ ] Microfone testado
-- [ ] Microfone testado
+
 
 ### Execução Diária (Desenvolvimento)
 

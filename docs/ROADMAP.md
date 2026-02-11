@@ -30,19 +30,19 @@ Este roadmap define a ordem de implementação das funcionalidades do J.O.S.E, p
 
 ## 📝 Etapa 1: Documentação 0.1 (EM ANDAMENTO)
 
-**Status:** 🔧 Em desenvolvimento
+**Status:** ✅ Concluído
 
 ### Entregas:
-- 🔧 `docs/SPEC.md` - Especificação técnica
-- 🔧 `docs/ARCHITECTURE.md` - Arquitetura do sistema
-- 🔧 `docs/ROADMAP.md` - Este arquivo
-- 🔧 `docs/KB_FORMAT.md` - Formato do knowledge base
-- 🔧 `docs/RUNBOOK_WINDOWS.md` - Guia de execução
-- 🔧 `docs/SAFETY.md` - Regras de segurança
+- ✅ `docs/SPEC.md` - Especificação técnica
+- ✅ `docs/ARCHITECTURE.md` - Arquitetura do sistema
+- ✅ `docs/ROADMAP.md` - Este arquivo
+- ✅ `docs/KB_FORMAT.md` - Formato do knowledge base
+- ✅ `docs/RUNBOOK_WINDOWS.md` - Guia de execução
+- ✅ `docs/SAFETY.md` - Regras de segurança
 
 ### Critério de Aceite:
-- [ ] Todos os 6 documentos criados
-- [ ] Documentos revisados e aprovados
+- [x] Todos os 6 documentos criados
+- [x] Documentos revisados e aprovados
 - [ ] Referências cruzadas funcionando
 
 ### Próximo Passo:
@@ -52,24 +52,24 @@ Após aprovação, iniciar **Etapa 2: API Mínima**
 
 ## 🚀 Etapa 2: API Mínima
 
-**Status:** ⏳ Aguardando
+**Status:** ✅ Concluído
 
 ### Entregas:
-- [ ] `src/api/main.py` - Servidor FastAPI
-  - [ ] `GET /health` - Status do sistema
-  - [ ] `POST /ask` - Endpoint de perguntas
-- [ ] `src/kb/loader.py` - Carregar KB de `data/kb/`
-- [ ] `src/kb/matcher.py` - Buscar respostas no KB
-- [ ] Resposta estruturada: `{answer, sources, confidence}`
-- [ ] 1 teste de integração (`tests/integration/test_api.py`)
-- [ ] Atualizar `docs/RUNBOOK_WINDOWS.md` com instruções
+- [x] `src/api/main.py` - Servidor FastAPI
+  - [x] `GET /health` - Status do sistema
+  - [x] `POST /ask` - Endpoint de perguntas
+- [x] `src/kb/loader.py` - Carregar KB de `data/kb/`
+- [x] `src/kb/matcher.py` - Buscar respostas no KB
+- [x] Resposta estruturada: `{answer, sources, confidence}`
+- [x] 1 teste de integração (`tests/integration/test_api.py`)
+- [x] Atualizar `docs/RUNBOOK_WINDOWS.md` com instruções
 
 ### Critério de Aceite:
-- [ ] `uvicorn src.api.main:app --reload` inicia servidor
-- [ ] `GET /health` retorna status 200
-- [ ] `POST /ask` retorna resposta válida do KB
-- [ ] Teste de integração passa (`pytest tests/integration/`)
-- [ ] RUNBOOK tem instruções claras de execução
+- [x] `uvicorn src.api.main:app --reload` inicia servidor
+- [x] `GET /health` retorna status 200
+- [x] `POST /ask` retorna resposta válida do KB
+- [x] Teste de integração passa (`pytest tests/integration/`)
+- [x] RUNBOOK tem instruções claras de execução
 
 ### Exemplo de Teste:
 ```powershell
@@ -103,24 +103,24 @@ Após aprovação, iniciar **Etapa 3**
 
 ### Etapa 3.1: Frontend Básico (Texto)
 **Entregas:**
-- [ ] `src/frontend/index.html` - Página principal
-- [ ] `src/frontend/app.js` - Lógica básica
-- [ ] `src/frontend/style.css` - Estilo (modo kiosk)
-- [ ] Input texto + botão "Perguntar"
-- [ ] Exibir resposta + confiança
+- [x] `src/frontend/index.html` - Página principal
+- [x] `src/frontend/app.js` - Lógica básica
+- [x] `src/frontend/style.css` - Estilo (modo kiosk)
+- [x] Input texto + botão "Perguntar"
+- [x] Exibir resposta + confiança
 
 **Critério de Aceite 3.1:**
-- [ ] Página carrega em `http://localhost:8000/`
-- [ ] Digitar pergunta → API responde → Exibe na tela
+- [x] Página carrega em `http://localhost:8000/`
+- [x] Digitar pergunta → API responde → Exibe na tela
 
 ### Etapa 3.2: Push-to-Talk (Áudio)
 **Entregas:**
-- [ ] Botão "Segurar para Falar"
-- [ ] Captura de microfone no navegador
-- [ ] Envio de áudio (ou texto transcrito) para API
+- [x] Botão "Segurar para Falar"
+- [x] Captura de microfone no navegador
+- [x] Envio de áudio (ou texto transcrito) para API
 
 **Critério de Aceite 3.2:**
-- [ ] Clicar e falar → API responde → Exibe na tela
+- [x] Clicar e falar → API responde → Exibe na tela
 
 ### Próximo Passo:
 Após aprovação, iniciar **Etapa 4: Testes e Qualidade**
@@ -191,8 +191,8 @@ Após aprovação, iniciar **Etapa 5: Deploy Raspberry Pi**
 | Etapa | Prioridade | Status |
 |-------|-----------|--------|
 | **Milestone 0** | Alta | ✅ Completo |
-| **Etapa 1: Docs** | Alta | 🔧 Em andamento |
-| **Etapa 2: API** | Alta | ⏳ Aguardando |
+| **Etapa 1: Docs** | Alta | ✅ Completo |
+| **Etapa 2: API** | Alta | ✅ Completo |
 | **Etapa 3.1: Frontend Txt** | Alta | ✅ Completo |
 | **Etapa 3.2: Frontend Talk** | Alta | ✅ Completo |
 | **Etapa 4: Testes** | Média | ⏳ Aguardando |
