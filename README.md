@@ -131,13 +131,13 @@ black src/ tests/
 ## 👥 Desenvolvimento
 
 <div align="center">
-  <a href="https://github.com/amadomaker">
-    <img src="https://github.com/amadomaker.png" width="100px" alt="Amado Maker"/>
+  <a href="https://github.com/joaodrj">
+    <img src="https://github.com/joaodrj.png" width="100px" alt="João Jr"/>
   </a>
 </div>
 
 ### Desenvolvedor
-**[João Jr](https://github.com/amadomaker)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
+**[João Jr](https://github.com/joaodrj)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
 
 **Organização:** [Amado Maker](https://github.com/amadomaker)
 
