@@ -3,7 +3,8 @@ name = "jose-nied"
 version = "1.0.0"
 description = "J.O.S.E - Jovem Orientador de Soluções Educacionais (NIED Robô Humanoide)"
 authors = [
-    {name = "Gideone Rafael", email = "nied@unicamp.br"}
+    {name = "João Jr", email = "junior44rpm@gmail.com"},
+    {name = "Gideone Rafael (Protótipo Original)", email = "nied@unicamp.br"}
 ]
 requires-python = ">=3.8"
 dependencies = [

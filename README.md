@@ -128,10 +128,15 @@ flake8 src/ tests/
 black src/ tests/
 ```
 
-## 🎓 Equipe NIED
+## 👥 Desenvolvimento
 
+### Desenvolvedor Principal
+- **João Jr** - Arquitetura, refatoração e desenvolvimento profissional do sistema
+- Organização: [Amado Maker](https://github.com/amadomaker)
+
+### Equipe NIED (Protótipo Original)
+- **Gideone Rafael** - Criador do protótipo original
 - **Orientação Técnica**: Eliton
-- **Desenvolvimento**: Gideone Rafael (criador principal)
 - **Bolsistas BAS**: Henrique, Pedro
 - **Bolsistas PIBIC**: Thayla, Otávio, Kauã
 
