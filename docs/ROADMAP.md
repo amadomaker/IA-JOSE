@@ -18,7 +18,6 @@ Este roadmap define a ordem de implementação das funcionalidades do J.O.S.E, p
 ### Entregas:
 - ✅ Estrutura de diretórios (`src/`, `docs/`, `tests/`, `data/`)
 - ✅ Configuração de projeto (`pyproject.toml`, `.gitignore`, `requirements.txt`)
-- ✅ Backup do protótipo original em `legacy/` (snapshot local)
 - ✅ Git repository com branches `main` e `dev`
 - ✅ README.md atualizado
 - ✅ Créditos e parceria Amado Maker × NIED

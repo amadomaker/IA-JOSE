@@ -45,37 +45,11 @@ python cerebro_inteligente_aprimorado.py
 uvicorn src.api.main:app --reload
 ```
 
-## 🎬 Quick Demo (Protótipo Legado - Sempre Funciona)
-
-Para rodar a versão original garantida:
-
-```powershell
-.\scripts\run_legacy.ps1
-```
-
-Este script:
-- ✅ Ativa o ambiente virtual automaticamente
-- ✅ Verifica dependências
-- ✅ Executa o protótipo original congelado
-- ✅ **Sempre funciona**, mesmo durante refatoração
-
-### Primeiro Uso
-
-1. Diga: **"José, o que é o NIED?"**
-2. O sistema responderá com informações do knowledge base
-3. Para ensinar algo novo: **"José, quem é [nome]?"**
-4. Siga as instruções de voz para completar o aprendizado
-
 ## 📁 Estrutura do Projeto
 
 ```
 c:\IA-JOSE\
-├── legacy/            # 🔒 Protótipo original (congelado)
-│   ├── cerebro_inteligente_aprimorado.py
-│   ├── cerebro_nied.json
-│   └── README.md
 ├── scripts/           # Scripts utilitários
-│   └── run_legacy.ps1  # Demo sempre funciona
 ├── src/
 │   ├── core/          # Lógica de negócio (brain, NLP, config)
 │   ├── kb/            # Knowledge base (loader, matcher, learner)

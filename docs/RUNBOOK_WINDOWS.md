@@ -77,37 +77,6 @@ pip install -r requirements.txt
 
 ## 🎬 Modos de Execução
 
-### Modo 1: CLI (Protótipo Legacy)
-
-**Quando usar:** Demo rápida, teste de funcionalidades básicas
-
-```powershell
-# Opção A: Script automatizado (recomendado)
-.\scripts\run_legacy.ps1
-
-# Opção B: Manual
-.\venv\Scripts\Activate.ps1
-cd legacy
-python cerebro_inteligente_aprimorado.py
-```
-
-**Saída esperada:**
-```
-✓ Sistema Nervoso (Arduino) Online.
-OU
-! Modo Simulação: Atuadores de boca offline.
-
-[J.O.S.E]: Olá! Sou o José...
-[Ouvindo...]
-```
-
-**Comandos de teste:**
-- "José, o que é o NIED?"
-- "José, quais equipamentos vocês têm?"
-- "José, tchau"
-
----
-
 ### Modo 2: API (FastAPI) - PLANEJADO (Etapa 2)
 
 **Status:** 📅 Planejado para Etapa 2 (API Mínima).
@@ -409,7 +378,7 @@ sudo systemctl status jose.service
 - [ ] Ambiente virtual criado
 - [ ] Dependências instaladas
 - [ ] Microfone testado
-- [ ] Demo legacy funciona
+- [ ] Microfone testado
 
 ### Execução Diária (Desenvolvimento)
 
