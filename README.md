@@ -130,13 +130,11 @@ black src/ tests/
 
 ## 👥 Desenvolvimento
 
-<div align="center">
-  <a href="https://github.com/joaodrj">
-    <img src="https://github.com/joaodrj.png" width="100px" alt="João Jr"/>
-  </a>
-</div>
-
 ### Desenvolvedor
+<a href="https://github.com/joaodrj">
+  <img src="https://github.com/joaodrj.png" width="60px" style="border-radius: 50%;" alt="João Jr"/>
+</a>
+
 **[João Jr](https://github.com/joaodrj)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
 
 **Organização:** [Amado Maker](https://github.com/amadomaker)
@@ -144,8 +142,15 @@ black src/ tests/
 ---
 
 ### Equipe NIED
-- **Gideone Rafael** - Desenvolvedor
+<a href="https://github.com/gideone-rafael">
+  <img src="https://github.com/gideone-rafael.png" width="60px" style="border-radius: 50%;" alt="Gideone Rafael"/>
+</a>
+<a href="https://github.com/eliton-nied">
+  <img src="https://github.com/eliton-nied.png" width="60px" style="border-radius: 50%;" alt="Eliton"/>
+</a>
+
 - **Orientação Técnica**: Eliton
+- **Gideone Rafael** - Desenvolvedor
 - **Bolsistas BAS**: Henrique, Pedro
 - **Bolsistas PIBIC**: Thayla, Otávio, Kauã
 
