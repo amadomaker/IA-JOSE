@@ -3,6 +3,48 @@ const API_URL = "http://localhost:8000";
 const chatHistory = document.getElementById('chat-history');
 const questionInput = document.getElementById('question-input');
 const askBtn = document.getElementById('ask-btn');
+const micBtn = document.getElementById('mic-btn');
+const micStatus = document.getElementById('mic-status');
+
+// Verificação de suporte a Web Speech API
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = null;
+
+if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = 'pt-BR';
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    recognition.onstart = () => {
+        micBtn.classList.add('listening');
+        micStatus.classList.remove('hidden');
+        micStatus.textContent = "Ouvindo... 👂";
+    };
+
+    recognition.onend = () => {
+        micBtn.classList.remove('listening');
+        micStatus.classList.add('hidden');
+    };
+
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        if (transcript) {
+            questionInput.value = transcript;
+            askQuestion(); // Auto-enviar ao terminar de falar
+        }
+    };
+
+    recognition.onerror = (event) => {
+        console.error("Erro no reconhecimento de voz:", event.error);
+        micStatus.textContent = `Erro: ${event.error}`;
+        micStatus.classList.remove('hidden');
+        setTimeout(() => micStatus.classList.add('hidden'), 3000);
+    };
+} else {
+    micBtn.style.display = 'none'; // Esconder se não suportado
+    console.warn("Web Speech API não suportada neste navegador.");
+}
 
 // Função para adicionar mensagem ao chat
 function addMessage(text, sender) {
@@ -27,7 +69,7 @@ async function askQuestion() {
     addMessage(question, 'user');
 
     // Mostrar "digitando..." (opcional, por enquanto direto)
-    
+
     try {
         const response = await fetch(`${API_URL}/ask`, {
             method: 'POST',
@@ -42,7 +84,7 @@ async function askQuestion() {
         }
 
         const data = await response.json();
-        
+
         // Simular um pequeno delay natural se a resposta for muito rápida
         // setTimeout(() => addMessage(data.answer, 'system'), 300);
         addMessage(data.answer, 'system');
@@ -64,6 +106,16 @@ async function askQuestion() {
 
 // Event Listeners
 askBtn.addEventListener('click', askQuestion);
+
+if (recognition) {
+    // Push-to-Talk logic (Segurar para falar)
+    micBtn.addEventListener('mousedown', () => recognition.start());
+    micBtn.addEventListener('mouseup', () => recognition.stop());
+
+    // Suporte a toque (Mobile/Tablet)
+    micBtn.addEventListener('touchstart', (e) => { e.preventDefault(); recognition.start(); });
+    micBtn.addEventListener('touchend', (e) => { e.preventDefault(); recognition.stop(); });
+}
 
 questionInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {

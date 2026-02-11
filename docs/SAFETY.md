@@ -219,8 +219,10 @@ Ou prefere que eu chame alguém para ajudar?"
 
 ### Privacidade em Serviços de Terceiros (MVP)
 
-- **STT/TTS Online:** O sistema utiliza serviços de terceiros (Google/Microsoft) para reconhecimento e síntese de voz.
-- **Áudio:** O áudio é enviado para processamento e não é armazenado pelo J.O.S.E, mas pode ser processado pelos provedores conforme suas políticas de privacidade.
+- **Web Speech API (Frontend):** O reconhecimento de voz no navegador (Etapa 3) utiliza os serviços integrados do Google/Microsoft.
+  - O áudio é processado de acordo com a política de privacidade do navegador escolhido.
+  - O J.O.S.E recebe apenas a **transcrição em texto**, nunca o áudio bruto.
+- **STT/TTS Python (Backend):** Utiliza bibliotecas que podem enviar áudio para nuvem (Google Speech Recognition).
 - **Offline:** Processamento local de voz está planejado para versões futuras (Etapa 5+).
 
 ---

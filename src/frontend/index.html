@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -20,14 +22,15 @@
                     Olá! Sou o assistente virtual do Espaço Maker. O que você gostaria de saber?
                 </div>
             </div>
-            
+
             <div class="input-area">
-                <input type="text" id="question-input" placeholder="Digite sua pergunta aqui..." autocomplete="off">
+                <input type="text" id="question-input" placeholder="Digite sua pergunta ou segure o microfone..."
+                    autocomplete="off">
+                <button id="mic-btn" class="mic-btn" title="Segure para falar">🎙️</button>
                 <button id="ask-btn">Perguntar</button>
             </div>
-            
-            <!-- Push-to-Talk placeholder for Etapa 3.2 -->
-            <!-- <button id="mic-btn" class="mic-btn">🎤</button> -->
+
+            <div id="mic-status" class="mic-status hidden">Ouvindo... 👂</div>
         </main>
 
         <footer>
@@ -40,4 +43,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -8,8 +8,8 @@
 ## 📊 Status Atual do Projeto
 
 - **✅ Etapa 1 (Docs):** Disponível (este documento)
-- **📅 Etapa 2 (API):** Planejado (ainda não implementado)
-- **📅 Etapa 3 (Frontend):** Planejado (ainda não implementado)
+- **✅ Etapa 2 (API):** Disponível (Instruções abaixo)
+- **✅ Etapa 3 (Frontend):** Disponível (Instruções abaixo)
 
 ---
 
@@ -77,38 +77,38 @@ pip install -r requirements.txt
 
 ## 🎬 Modos de Execução
 
-### Modo 2: API (FastAPI) - PLANEJADO (Etapa 2)
-
-**Status:** 📅 Planejado para Etapa 2 (API Mínima).
-
-**Quando usar:** Futuramente, para desenvolvimento web e integração.
-
-#### Iniciar Servidor (Futuro)
-
+### Modo 2: API (FastAPI) - DISPONÍVEL
+ 
+**Status:** ✅ Implementado na Etapa 2.
+ 
+**Quando usar:** Para rodar o "cérebro" do sistema.
+ 
+#### Iniciar Servidor
+ 
 ```powershell
-# Comando planejado (ainda não disponível)
+# Com venv ativado:
 uvicorn src.api.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 #### Testar Endpoints (Futuro)
 
-**GET /health (Planejado)**
+**GET /health**
 ```powershell
 # PowerShell
 Invoke-RestMethod -Uri http://localhost:8000/health -Method GET
 ```
 
-**Exemplo de Resposta (Contrato):**
+**Exemplo de Resposta:**
 ```json
 {
   "status": "healthy",
   "kb_loaded": true,
   "kb_entries": 42,
-  "version": "1.0.0"
+  "version": "0.1.0"
 }
 ```
 
-**POST /ask (Planejado)**
+**POST /ask**
 ```powershell
 # PowerShell
 $body = @{
@@ -140,23 +140,24 @@ Invoke-RestMethod -Uri http://localhost:8000/ask `
 
 ---
 
-### Modo 3: Frontend Web (Kiosk) - PLANEJADO (Etapa 3)
+### Modo 3: Frontend Web (Kiosk) - DISPONÍVEL
 
-**Status:** 📅 Planejado para Etapa 3 (Frontend).
+**Status:** ✅ Implementado na Etapa 3.
 
-**Quando usar:** Futuramente, para interação via navegador.
+**Quando usar:** Para interação visual e por voz via navegador.
 
-#### Iniciar Frontend (Futuro)
+#### Iniciar Frontend
 
 ```powershell
-# Servidor já deve estar rodando (Modo 2)
-# Abrir navegador em:
-start http://localhost:8000/
+# 1. Certifique-se que o servidor (Modo 2) está rodando
+# 2. Abra o navegador (Chrome/Edge recomendados) em:
+start http://localhost:8000/app/index.html
 ```
 
-**Funcionalidades Planejadas:**
-- **Modo Texto:** Digitar pergunta e clicar "Perguntar" (Etapa 3.1)
-- **Push-to-Talk:** Segurar botão, falar, soltar (Etapa 3.2)
+#### Funcionalidades
+- **Modo Texto:** Digite sua pergunta e tecle Enter ou clique em "Perguntar".
+- **Push-to-Talk:** Segure o botão de microfone (🎙️), fale a pergunta e solte para enviar.
+  - *Nota:* O navegador pedirá permissão de microfone na primeira vez.
 
 ---
 
