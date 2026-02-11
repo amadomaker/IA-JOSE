@@ -9,7 +9,7 @@
 
 O Knowledge Base (KB) do J.O.S.E é armazenado em formato JSON estruturado, permitindo fácil edição, versionamento e expansão.
 
-**Localização:** `data/kb/nied_kb.json`
+**Localização:** `data/cerebro_nied.json`
 
 ---
 
@@ -150,7 +150,7 @@ O Knowledge Base (KB) do J.O.S.E é armazenado em formato JSON estruturado, perm
 O KB deve ser versionado no Git junto com o código:
 
 ```bash
-git add data/kb/nied_kb.json
+git add data/cerebro_nied.json
 git commit -m "kb: add entry about 3D printers"
 git push origin dev
 ```
@@ -284,7 +284,7 @@ def validate_kb(kb):
 
 ```powershell
 # Validar JSON
-python -m json.tool data/kb/nied_kb.json
+python -m json.tool data/cerebro_nied.json
 
 # Se retornar sem erro, JSON é válido
 ```
@@ -316,7 +316,7 @@ Sistema: "Perfeito! Informação salva."
 
 ### Edição Manual
 
-Editar `data/kb/nied_kb.json` diretamente:
+Editar `data/cerebro_nied.json` diretamente:
 
 1. Abrir arquivo em editor de texto
 2. Adicionar/modificar entrada

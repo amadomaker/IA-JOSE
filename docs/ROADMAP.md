@@ -99,7 +99,7 @@ Após aprovação, iniciar **Etapa 3**
 
 ## 🖥️ Etapa 3: Frontend Kiosk
 
-**Status:** ⏳ Aguardando
+**Status:** ✅ Concluído
 
 ### Etapa 3.1: Frontend Básico (Texto)
 **Entregas:**
@@ -193,8 +193,8 @@ Após aprovação, iniciar **Etapa 5: Deploy Raspberry Pi**
 | **Milestone 0** | Alta | ✅ Completo |
 | **Etapa 1: Docs** | Alta | 🔧 Em andamento |
 | **Etapa 2: API** | Alta | ⏳ Aguardando |
-| **Etapa 3.1: Frontend Txt** | Alta | ⏳ Aguardando |
-| **Etapa 3.2: Frontend Talk** | Alta | ⏳ Aguardando |
+| **Etapa 3.1: Frontend Txt** | Alta | ✅ Completo |
+| **Etapa 3.2: Frontend Talk** | Alta | ✅ Completo |
 | **Etapa 4: Testes** | Média | ⏳ Aguardando |
 | **Etapa 5: Raspberry** | Média | 🔮 Planejado |
 | **Etapa 6: IA Avançada** | Baixa | 🔮 Planejado |

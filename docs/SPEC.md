@@ -72,20 +72,20 @@ J.O.S.E (Jovem Orientador de Soluções Educacionais) é um assistente virtual i
 
 ### RF2: Síntese de Voz
 - **Descrição:** Sistema deve responder com voz natural
-- **Tecnologia:** Microsoft Edge TTS
-- **Voz:** Antonio (pt-BR, masculina)
+- **Tecnologia:** Híbrido (Microsoft Edge TTS no Backend / Web Speech API no Frontend)
+- **Voz:** Antonio (Backend) / Voz Nativa do Navegador (Frontend)
 - **Qualidade:** Alta fidelidade, natural
 
 ### RF3: Knowledge Base
 - **Formato:** JSON estruturado
-- **Localização:** `data/kb/nied_kb.json`
+- **Localização:** `data/cerebro_nied.json`
 - **Conteúdo:** Perguntas/respostas sobre NIED, equipamentos, projetos
 - **Versionamento:** Controle de versão do KB
 
 ### RF4: Modo Aprendizado
 - **Descrição:** Sistema pode aprender novas respostas interativamente
 - **Fluxo:** Pergunta desconhecida → Solicita resposta → Confirma → Salva
-- **Persistência:** Salvar em `data/kb/nied_kb.json`
+- **Persistência:** Salvar em `data/cerebro_nied.json`
 
 ### RF5: API REST
 - **Tecnologia:** FastAPI
