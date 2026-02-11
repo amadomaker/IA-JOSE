@@ -30,6 +30,15 @@
                 <button id="ask-btn">Perguntar</button>
             </div>
 
+            <div class="controls-area">
+                <button id="repeat-btn" class="secondary-btn hidden" title="Repetir última resposta">🔊 Repetir</button>
+                <div class="tts-toggle">
+                    <label for="tts-switch">Voz:</label>
+                    <input type="checkbox" id="tts-switch" checked>
+                    <span class="toggle-status">ON</span>
+                </div>
+            </div>
+
             <div id="mic-status" class="mic-status hidden">Ouvindo... 👂</div>
         </main>
 
@@ -41,7 +50,7 @@
         </footer>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 
 </html>

@@ -5,6 +5,58 @@ const questionInput = document.getElementById('question-input');
 const askBtn = document.getElementById('ask-btn');
 const micBtn = document.getElementById('mic-btn');
 const micStatus = document.getElementById('mic-status');
+const repeatBtn = document.getElementById('repeat-btn');
+const ttsSwitch = document.getElementById('tts-switch');
+const toggleStatus = document.querySelector('.toggle-status');
+
+// Estado
+let lastAnswer = "";
+let isTtsEnabled = true;
+
+// Configuração TTS (Backend)
+const audioPlayer = new Audio();
+
+async function speakText(text) {
+    if (!isTtsEnabled || !text) return;
+
+    // Parar áudio anterior
+    audioPlayer.pause();
+
+    try {
+        console.log("Solicitando áudio ao backend...");
+        const response = await fetch(`${API_URL}/tts`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: text })
+        });
+
+        if (!response.ok) throw new Error("Erro ao gerar áudio");
+
+        const data = await response.json();
+        const audioUrl = `${API_URL}${data.audio_url}`;
+
+        console.log("Reproduzindo:", audioUrl);
+        // Adicionar timestamp para evitar cache
+        audioPlayer.src = `${audioUrl}?t=${new Date().getTime()}`;
+        audioPlayer.play();
+
+    } catch (error) {
+        console.error("Erro no TTS Backend:", error);
+    }
+}
+
+// Handler do Toggle TTS
+ttsSwitch.addEventListener('change', (e) => {
+    isTtsEnabled = e.target.checked;
+    toggleStatus.textContent = isTtsEnabled ? "ON" : "OFF";
+    if (!isTtsEnabled) audioPlayer.pause();
+});
+
+// Handler do Botão Repetir
+repeatBtn.addEventListener('click', () => {
+    if (lastAnswer) speakText(lastAnswer);
+});
+
 
 // Verificação de suporte a Web Speech API
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -85,9 +137,15 @@ async function askQuestion() {
 
         const data = await response.json();
 
+
         // Simular um pequeno delay natural se a resposta for muito rápida
         // setTimeout(() => addMessage(data.answer, 'system'), 300);
         addMessage(data.answer, 'system');
+
+        // Salvar resposta para repetição e falar
+        lastAnswer = data.answer;
+        repeatBtn.classList.remove('hidden');
+        speakText(data.answer);
 
         // Log de fontes para debug no console
         console.log("Sources:", data.sources);

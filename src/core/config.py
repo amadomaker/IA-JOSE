@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).parent.parent.parent
 DATA_DIR = ROOT_DIR / "data"
 LOGS_DIR = ROOT_DIR / "logs"
+AUDIO_DIR = DATA_DIR / "audio"
 
 
 class VoiceConfig:
@@ -26,7 +27,7 @@ class VoiceConfig:
     PHRASE_TIME_LIMIT = 8  # Tempo máximo de frase em segundos
 
     # Arquivos temporários
-    TEMP_AUDIO_FILE = "resposta.mp3"
+    TEMP_AUDIO_FILE = AUDIO_DIR / "resposta.mp3"
 
 
 class WakeWordConfig:
@@ -109,3 +110,4 @@ class APIConfig:
 # Criar diretórios se não existirem
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)

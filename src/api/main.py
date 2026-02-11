@@ -7,7 +7,12 @@ from src.core.config import KnowledgeBaseConfig
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.staticfiles import StaticFiles
+from src.io.voice import get_tts
+from src.core.config import AUDIO_DIR
+from src.kb.matcher import find_best_match, find_match
 import logging
+import uuid
 
 # Configuração de logs
 logging.basicConfig(level=logging.INFO)
@@ -34,9 +39,23 @@ frontend_path = Path(__file__).parent.parent / "frontend"
 frontend_path.mkdir(parents=True, exist_ok=True)
 app.mount("/app", StaticFiles(directory=frontend_path, html=True), name="frontend")
 
+# Montar diretório de áudio temporário
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+app.mount("/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+
+# Montar diretório de áudio temporário
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+app.mount("/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+
 # Modelo de entrada para /ask
 class QuestionRequest(BaseModel):
     question: str
+
+# Modelo de entrada para /tts
+class TTSRequest(BaseModel):
+    text: str
+
+
 
 # Modelo de saída para /ask
 class AskResponse(BaseModel):
@@ -91,3 +110,53 @@ async def ask_question(request: QuestionRequest):
         },
         "confidence": 0.0
     }
+
+@app.post("/tts")
+async def text_to_speech(request: TTSRequest):
+    """
+    Gera áudio a partir de texto usando Edge TTS (Backend).
+    Retorna URL para o arquivo de áudio gerado.
+    """
+    try:
+        # Gerar nome de arquivo único para evitar colisão/cache
+        filename = f"tts_{uuid.uuid4().hex}.mp3"
+        output_path = AUDIO_DIR / filename
+        
+        # Gerar áudio
+        tts = get_tts()
+        success = await tts.generate_audio(request.text, output_path)
+        
+        if not success:
+            raise HTTPException(status_code=500, detail="Failed to generate audio")
+            
+        return {"audio_url": f"/audio/{filename}"}
+
+    except Exception as e:
+        logger.error(f"Erro no TTS endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/tts")
+async def text_to_speech(request: TTSRequest):
+    """
+    Gera áudio a partir de texto usando Edge TTS (Backend).
+    Retorna URL para o arquivo de áudio gerado.
+    """
+    try:
+        # Gerar nome de arquivo único para evitar colisão/cache
+        filename = f"tts_{uuid.uuid4().hex}.mp3"
+        output_path = AUDIO_DIR / filename
+        
+        # Gerar áudio
+        tts = get_tts()
+        success = await tts.generate_audio(request.text, output_path)
+        
+        if not success:
+            raise HTTPException(status_code=500, detail="Failed to generate audio")
+            
+        return {"audio_url": f"/audio/{filename}"}
+
+    except Exception as e:
+        logger.error(f"Erro no TTS endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+

@@ -38,13 +38,13 @@ class TextToSpeech:
         Returns:
             True se gerou com sucesso
         """
-        try:
-            comunicador = edge_tts.Communicate(texto, self.voice, rate=self.rate)
-            await comunicador.save(str(output_file))
-            return True
-        except Exception as e:
-            print(f"❌ Erro no TTS: {e}")
-            return False
+        # Garantir que o diretório existe
+        output_path = Path(output_file)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        comunicador = edge_tts.Communicate(texto, self.voice, rate=self.rate)
+        await comunicador.save(str(output_path))
+        return True
 
     def speak(self, texto: str, sync_mouth: bool = True) -> bool:
         """

@@ -179,6 +179,47 @@ button:disabled {
     visibility: hidden;
 }
 
+/* Controls Area */
+.controls-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: #121212;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.secondary-btn:hover {
+    background-color: #e59400;
+}
+
+.secondary-btn.hidden {
+    display: none;
+}
+
+.tts-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    background: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.tts-toggle input {
+    cursor: pointer;
+}
+
 footer {
     margin-top: 10px;
     text-align: center;
