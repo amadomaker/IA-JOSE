@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.O.S.E - NIED</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>J.O.S.E</h1>
+            <p>Jovem Orientador de Soluções Educacionais</p>
+        </header>
+
+        <main>
+            <div id="chat-history" class="chat-history">
+                <div class="message system">
+                    Olá! Sou o assistente virtual do Espaço Maker. O que você gostaria de saber?
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="question-input" placeholder="Digite sua pergunta ou segure o microfone..."
+                    autocomplete="off">
+                <button id="mic-btn" class="mic-btn" title="Segure para falar">🎙️</button>
+                <button id="ask-btn">Perguntar</button>
+            </div>
+
+            <div class="controls-area">
+                <button id="repeat-btn" class="secondary-btn hidden" title="Repetir última resposta">🔊 Repetir</button>
+                <div class="tts-toggle">
+                    <label for="tts-switch">Voz:</label>
+                    <input type="checkbox" id="tts-switch" checked>
+                    <span class="toggle-status">ON</span>
+                </div>
+            </div>
+
+            <div id="mic-status" class="mic-status hidden">Ouvindo... 👂</div>
+        </main>
+
+        <footer>
+            <div class="status-bar">
+                <span id="status-text">Sistema Online</span>
+                <span class="version">v0.1</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js?v=2"></script>
+</body>
+
+</html>

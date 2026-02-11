@@ -4,7 +4,7 @@ Módulo Matcher - Matching de perguntas com gatilhos do KB
 from typing import Optional, Dict, Any, List, Tuple
 
 
-def find_match(pergunta: str, kb: List[Dict[str, Any]]) -> Optional[str]:
+def find_match(pergunta: str, kb: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     """
     Busca uma resposta no KB baseado em matching de gatilhos.
 
@@ -18,13 +18,21 @@ def find_match(pergunta: str, kb: List[Dict[str, Any]]) -> Optional[str]:
         kb: Knowledge base (lista de entradas)
 
     Returns:
-        Resposta encontrada ou None
+        Dicionário structured ou None
     """
     pergunta_lower = pergunta.lower().strip()
 
     for item in kb:
-        if any(gatilho in pergunta_lower for gatilho in item["gatilhos"]):
-            return item["resposta"]
+        matched_triggers = [g for g in item["gatilhos"] if g.lower() in pergunta_lower]
+        if matched_triggers:
+            return {
+                "answer": item["resposta"],
+                "sources": {
+                    "kb_entry_id": item.get("id"),
+                    "matched_triggers": matched_triggers
+                },
+                "confidence": 1.0  # Match exato de substring
+            }
 
     return None
 
@@ -90,7 +98,7 @@ def calculate_similarity(pergunta: str, gatilho: str) -> float:
 
 def find_best_match(
     pergunta: str, kb: List[Dict[str, Any]], threshold: float = 0.5
-) -> Optional[Tuple[str, float]]:
+) -> Optional[Dict[str, Any]]:
     """
     Busca a melhor resposta baseado em score de similaridade.
 
@@ -100,21 +108,37 @@ def find_best_match(
         threshold: Score mínimo para considerar um match
 
     Returns:
-        Tupla (resposta, score) ou None se não houver match acima do threshold
+        Dicionário structured (answer, sources, confidence) ou None
     """
     best_score = 0.0
-    best_response = None
+    best_entry = None
+    best_triggers = []
 
     for item in kb:
-        for gatilho in item["gatilhos"]:
+        entry_triggers = item["gatilhos"]
+        entry_best_score = 0.0
+        
+        for gatilho in entry_triggers:
             score = calculate_similarity(pergunta, gatilho)
+            if score > entry_best_score:
+                entry_best_score = score
+        
+        if entry_best_score > best_score:
+            best_score = entry_best_score
+            best_entry = item
+            # Coletar gatilhos relevantes para "sources"
+            best_triggers = [g for g in entry_triggers if calculate_similarity(pergunta, g) > 0.5]
 
-            if score > best_score:
-                best_score = score
-                best_response = item["resposta"]
 
-    if best_score >= threshold:
-        return (best_response, best_score)
+    if best_score >= threshold and best_entry:
+        return {
+            "answer": best_entry["resposta"],
+            "sources": {
+                "kb_entry_id": best_entry.get("id"),
+                "matched_triggers": best_triggers
+            },
+            "confidence": best_score
+        }
 
     return None
 

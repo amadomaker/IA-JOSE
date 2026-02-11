@@ -45,17 +45,11 @@ python cerebro_inteligente_aprimorado.py
 uvicorn src.api.main:app --reload
 ```
 
-### Primeiro Uso
-
-1. Diga: **"José, o que é o NIED?"**
-2. O sistema responderá com informações do knowledge base
-3. Para ensinar algo novo: **"José, quem é [nome]?"**
-4. Siga as instruções de voz para completar o aprendizado
-
 ## 📁 Estrutura do Projeto
 
 ```
 c:\IA-JOSE\
+├── scripts/           # Scripts utilitários
 ├── src/
 │   ├── core/          # Lógica de negócio (brain, NLP, config)
 │   ├── kb/            # Knowledge base (loader, matcher, learner)
@@ -66,9 +60,12 @@ c:\IA-JOSE\
 │   ├── unit/          # Testes unitários
 │   └── integration/   # Testes de integração
 ├── docs/              # Documentação técnica
-├── data/              # Knowledge base JSON
+├── data/
+│   ├── kb/            # Knowledge base (nied_kb.json)
+│   └── cerebro_nied.json  # KB original (mantido)
 ├── logs/              # Logs de telemetria
-└── cerebro_inteligente_aprimorado.py  # Script original (mantido)
+├── cerebro_inteligente_aprimorado.py  # Script original (raiz)
+└── README.md          # Este arquivo
 ```
 
 ## 📚 Documentação
@@ -105,10 +102,29 @@ flake8 src/ tests/
 black src/ tests/
 ```
 
-## 🎓 Equipe NIED
+## 👥 Desenvolvimento
+
+### Desenvolvedor
+<a href="https://github.com/joaodrj">
+  <img src="https://github.com/joaodrj.png" width="60px" style="border-radius: 50%;" alt="João Jr"/>
+</a>
+
+**[João Jr](https://github.com/joaodrj)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
+
+**Organização:** [Amado Maker](https://github.com/amadomaker)
+
+---
+
+### Equipe NIED
+<a href="https://github.com/gideone-rafael">
+  <img src="https://github.com/gideone-rafael.png" width="60px" style="border-radius: 50%;" alt="Gideone Rafael"/>
+</a>
+<a href="https://github.com/eliton-nied">
+  <img src="https://github.com/eliton-nied.png" width="60px" style="border-radius: 50%;" alt="Eliton"/>
+</a>
 
 - **Orientação Técnica**: Eliton
-- **Desenvolvimento**: Gideone Rafael (criador principal)
+- **Gideone Rafael** - Desenvolvedor
 - **Bolsistas BAS**: Henrique, Pedro
 - **Bolsistas PIBIC**: Thayla, Otávio, Kauã
 
@@ -123,4 +139,4 @@ Projeto educacional desenvolvido no NIED/Unicamp para fins de pesquisa em robót
 
 ---
 
-**Desenvolvido com ❤️ no Espaço Maker de Robótica Pedagógica - NIED/Unicamp**
+**Desenvolvido em parceria: Amado Maker × NIED/Unicamp**

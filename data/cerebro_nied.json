@@ -54,7 +54,7 @@
             "quem é o gideone",
             "quem é seu mestre"
         ],
-        "resposta": "Fui desenvolvido pelo bolsista Gidêone, da equipe do Espaço Maker do NIED, utilizando tecnologias de código aberto, inteligência artificial e muita cultura maker."
+        "resposta": "Fui desenvolvido pelo NIED em parceria com a Amado Maker, utilizando tecnologias de código aberto, inteligência artificial e muita cultura maker."
     },
     {
         "gatilhos": [
@@ -280,7 +280,7 @@
             "jony",
             "criador"
         ],
-        "resposta": "O Gideone é o meu criador principal e faz parte da nossa equipe de bolsistas, além de colaborar ativamente no desenvolvimento dos projetos de robótica e na manutenção do espaço maker."
+        "resposta": "Eu fui criado pelo NIED em parceria com a Amado Maker, com a colaboração ativa dos bolsistas e da equipe do Espaço Maker."
     },
     {
         "gatilhos": [
@@ -352,7 +352,7 @@
         "gatilhos": [
             "quem criou você"
         ],
-        "resposta": "basicamente quem me criou foi o gideone, bolsista do nied"
+        "resposta": "fui criado pelo NIED em parceria com a Amado Maker"
     },
     {
         "gatilhos": [
@@ -365,7 +365,7 @@
             "o que é amado make",
             "amado"
         ],
-        "resposta": "é uma empresa especializada em implementar a cultura maker na educação e condizente com robótica"
+        "resposta": "A Amado Maker é uma empresa parceira do NIED especializada em implementar a cultura maker e robótica na educação."
     },
     {
         "gatilhos": [

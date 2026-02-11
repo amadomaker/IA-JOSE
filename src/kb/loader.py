@@ -68,6 +68,13 @@ def validate_kb_schema(data: Any) -> bool:
         if not isinstance(item, dict):
             raise KBValidationError(f"Entrada {idx} deve ser um dicionário")
 
+        # Auto-gerar ID se não existir (para compatibilidade com JSON antigo)
+        if "id" not in item:
+            item["id"] = idx + 1
+
+        if not isinstance(item["id"], int):
+            raise KBValidationError(f"Entrada {idx}: 'id' deve ser um inteiro")
+
         if "gatilhos" not in item:
             raise KBValidationError(f"Entrada {idx} não possui campo 'gatilhos'")
 
