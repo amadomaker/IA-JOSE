@@ -10,7 +10,7 @@
 # ==================================================================================
 
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  J.O.S.E - DEMO LEGADO (PROTÓTIPO)    " -ForegroundColor Cyan
+Write-Host "  J.O.S.E - DEMO LEGADO (PROTOTIPO)    " -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
