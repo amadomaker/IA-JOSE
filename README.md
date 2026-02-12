@@ -9,6 +9,7 @@
 ## 🎯 Sobre o Projeto
 
 J.O.S.E é um assistente virtual interativo com capacidades de:
+
 - 🎤 **Reconhecimento de voz** (Google Speech Recognition)
 - 🔊 **Síntese de voz natural** (Microsoft Edge TTS - voz Antonio)
 - 🧠 **Aprendizado contínuo** via diálogo interativo
@@ -105,9 +106,18 @@ black src/ tests/
 ## 👥 Desenvolvimento
 
 ### Desenvolvedor
-<a href="https://github.com/joaodrj">
-  <img src="https://github.com/joaodrj.png" width="60px" style="border-radius: 50%;" alt="João Jr"/>
-</a>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/joaodrj">
+        <img src="https://github.com/joaodrj.png" width="90px" style="border-radius: 50%;" alt="João Jr"/><br/>
+        <b>João Jr</b>
+      </a><br/>
+      Desenvolvedor
+    </td>
+  </tr>
+</table>
 
 **[João Jr](https://github.com/joaodrj)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
 
@@ -116,15 +126,33 @@ black src/ tests/
 ---
 
 ### Equipe NIED
-<a href="https://github.com/gideone-rafael">
-  <img src="https://github.com/gideone-rafael.png" width="60px" style="border-radius: 50%;" alt="Gideone Rafael"/>
-</a>
-<a href="https://github.com/eliton-nied">
-  <img src="https://github.com/eliton-nied.png" width="60px" style="border-radius: 50%;" alt="Eliton"/>
-</a>
 
-- **Orientação Técnica**: Eliton
-- **Gideone Rafael** - Desenvolvedor
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.nied.unicamp.br/equipe/eliton-meires-de-moura/">
+        <img src="https://www.nied.unicamp.br/wp-content/uploads/2024/08/Eliton-equipe-nied-v2025-300x289.jpg" width="90px" style="border-radius: 50%;" alt="Eliton"/><br/>
+        <b>Eliton</b>
+      </a><br/>
+      Liderança técnica
+    </td>
+    <td align="center">
+      <a href="https://github.com/gideonesantos-tech">
+        <img src="https://github.com/gideonesantos-tech.png" width="90px" style="border-radius: 50%;" alt="Gideone Rafael"/><br/>
+        <b>Gideone Rafael</b>
+      </a><br/>
+      Desenvolvedor
+    </td>
+    <td align="center">
+      <a href="https://github.com/RafaelLevi8708">
+        <img src="https://github.com/RafaelLevi8708.png" width="90px" style="border-radius: 50%;" alt="Rafael Levi"/><br/>
+        <b>Rafael Levi</b>
+      </a><br/>
+      Desenvolvedor
+    </td>
+  </tr>
+</table>
+
 - **Bolsistas BAS**: Henrique, Pedro
 - **Bolsistas PIBIC**: Thayla, Otávio, Kauã
 
