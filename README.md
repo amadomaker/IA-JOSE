@@ -105,8 +105,6 @@ black src/ tests/
 
 ## 👥 Desenvolvimento
 
-### Desenvolvedor
-
 <table>
   <tr>
     <td align="center">
@@ -116,12 +114,24 @@ black src/ tests/
       </a><br/>
       Desenvolvedor
     </td>
+    <td align="center">
+      <a href="https://github.com/vinicius3516">
+        <img src="https://github.com/vinicius3516.png" width="90px" style="border-radius: 50%;" alt="Vinicius Costa"/><br/>
+        <b>Vinicius Costa</b>
+      </a><br/>
+      DevOps Engineer
+    </td>
   </tr>
 </table>
 
-**[João Jr](https://github.com/joaodrj)** - Arquitetura do sistema, refatoração, implementação de API/Frontend, testes, documentação e evolução contínua do projeto.
+**[João Jr](https://github.com/joaodrj)**  
+Arquitetura do sistema, refatoração, implementação de API e Frontend, testes automatizados, documentação técnica e evolução contínua do projeto.
+
+**[Vinicius Costa](https://github.com/vinicius3516)**  
+Cultura DevOps, padronização de infraestrutura, pipelines CI/CD, observabilidade e segurança. Responsável também pela **concepção, construção e evolução do agente de IA principal do projeto J.O.S.E**, incluindo arquitetura cognitiva, integração com LLMs, ferramentas (tools), orquestração de fluxos inteligentes e boas práticas de IA aplicada.
 
 **Organização:** [Amado Maker](https://github.com/amadomaker)
+
 
 ---
 
